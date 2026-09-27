@@ -1,11 +1,22 @@
 # Cartoon Terrain Studio
 
+![Cartoon Terrain Studio](docs/images/hero.jpg)
+
 Paint, generate and explore hand-inked 2.5D cartoon terrain — terraces, cliffs, rivers, waterfalls, chasms, bridges
 and forests — rendered live in a comic look (one light ramp, hatching, ink outlines, soft shadows).
 
 The terrain comes from a prototype of a [flui.gg](https://flui.gg) project: first built in TypeScript/three.js, then
 ported to Godot with Claude Code and Codex, reworked and boiled down into this standalone studio. Everything is code
 and shaders; there are no hand-made textures, models or sprites.
+
+## Quick start
+
+1. Install the [.NET SDK 8](https://dotnet.microsoft.com/download) (Windows 10/11).
+2. Clone this repository, or download it with *Code → Download ZIP* and unpack it.
+3. Double-click **`Start.cmd`**. The first start downloads Godot 4.7.2 .NET, builds the project and imports the shaders,
+   which takes about a minute. A welcome card then offers the three modes.
+
+## What it does
 
 The studio has three modes, switched at the top of the window:
 
@@ -22,6 +33,16 @@ stones, rock texture, strata, moss, pattern sizes, wind, water, weather, light a
 switches (organic rock, uneven ground, 3D vegetation, flowers), which rebuild the terrain. Styles can be saved and
 loaded.
 
+| Generate a map … | … and edit it in Paint |
+| --- | --- |
+| ![Generate mode](docs/images/generate.jpg) | ![Paint mode](docs/images/paint.jpg) |
+| **Explore endless worlds** | **Restyle everything live** |
+| ![Explore mode](docs/images/explore.jpg) | ![Style drawer](docs/images/style.jpg) |
+
+Every seed grows a world of its own, and every look restyles it:
+
+![Six different worlds](docs/images/worlds.jpg)
+
 ## Requirements
 
 * Windows 10/11 (Direct3D 12 or Vulkan), a GPU from roughly 2018 onwards (a Linux export preset is included but untested)
@@ -30,8 +51,7 @@ loaded.
 
 ## Starting
 
-**Double-click `Start.cmd`.** The first start downloads Godot 4.7.2 .NET, builds the C# project and imports the shaders,
-which takes about a minute. A welcome card then offers the three modes.
+`Start.cmd` (see *Quick start*) takes these options:
 
 | Call | Effect |
 | --- | --- |
@@ -148,6 +168,7 @@ src/Comic/                    the comic pipeline (material admission, world ink 
 shaders/terrain, shaders/vegetation, shaders/studio, assets/shaders   shaders
 assets/terrain/               the material noise texture of the terrain shader
 docs/ARCHITECTURE.md          how the terrain is built and drawn, and how the studio is put together
+docs/images/                  the screenshots of this README (ignored by Godot)
 ```
 
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for how the terrain is built and drawn, and for how the studio is put
