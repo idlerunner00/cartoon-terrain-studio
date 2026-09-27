@@ -18,6 +18,8 @@ and shaders; there are no hand-made textures, models or sprites.
 
 ## What it does
 
+![Painting a map by hand: rock at three heights, pools, a waterfall into a canyon, a ravine](docs/images/paint.gif)
+
 The studio has three modes, switched at the top of the window:
 
 | Mode | What it does |
