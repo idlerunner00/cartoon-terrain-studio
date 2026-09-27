@@ -11,10 +11,13 @@ and shaders; there are no hand-made textures, models or sprites.
 
 ## Quick start
 
-1. Install the [.NET SDK 8](https://dotnet.microsoft.com/download) (Windows 10/11).
-2. Clone this repository, or download it with *Code → Download ZIP* and unpack it.
-3. Double-click **`Start.cmd`**. The first start downloads Godot 4.7.2 .NET, builds the project and imports the shaders,
-   which takes about a minute. A welcome card then offers the three modes.
+1. Clone this repository, or download it with *Code → Download ZIP* and unpack it (Windows 10/11).
+2. Double-click **`Start.cmd`**. The first start downloads Godot 4.7.2 .NET, builds the project and imports the shaders,
+   which takes a minute or two. A welcome card then offers the three modes.
+
+Nothing has to be installed first: if the PC has no [.NET SDK](https://dotnet.microsoft.com/download) 8 or newer,
+`Start.cmd` also downloads a private .NET SDK 10 into `.tools` (about 290 MB). If the start fails, the window stays open
+and says why; the studio's own log is `%APPDATA%\Godot\app_userdata\Cartoon Terrain Studio\logs\godot.log`.
 
 ## What it does
 
@@ -46,7 +49,7 @@ Every seed grows a world of its own, and every look restyles it:
 ## Requirements
 
 * Windows 10/11 (Direct3D 12 or Vulkan), a GPU from roughly 2018 onwards (a Linux export preset is included but untested)
-* [.NET SDK 8](https://dotnet.microsoft.com/download)
+* [.NET SDK 8 or newer](https://dotnet.microsoft.com/download) — or let `Start.cmd` download a private one into `.tools`
 * [Godot 4.7.2 .NET](https://godotengine.org/download) — or let `Start.cmd` download it into `.tools`
 
 ## Starting
@@ -67,7 +70,7 @@ Every seed grows a world of its own, and every look restyles it:
 
 The project is an ordinary Godot 4.7 C# project; no scripts or tools beyond the editor are needed.
 
-1. Install **Godot 4.7.2 .NET** (the ".NET" download) and the **.NET SDK 8**.
+1. Install **Godot 4.7.2 .NET** (the ".NET" download) and the **.NET SDK 8** or newer.
 2. In the Project Manager choose **Import**, select `project.godot` and open it. The first import takes a minute.
 3. Press **F5** (or the ▶ button). Godot builds the C# code and runs `scenes/Studio.tscn`.
 
