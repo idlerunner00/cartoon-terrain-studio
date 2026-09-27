@@ -1,0 +1,22 @@
+<Project Sdk="Godot.NET.Sdk/4.7.2">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>TerrainStudio</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <!-- The terrain core is a line-by-line port of the TypeScript original: it keeps its identifiers verbatim
+         (camelCase members, SCREAMING constants, lower-case module objects), its constant branches and its
+         initialisation order, which the nullable analysis cannot follow. -->
+    <NoWarn>CS8618;CS8600;CS8604;CS0162;CS8981;IDE1006</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DefaultItemExcludes>$(DefaultItemExcludes);.tools/**;build/**</DefaultItemExcludes>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <!-- Godot loads the Debug assembly outside an export; terrain generation and the geometry bake need optimised code
+         (about 3x faster). Debugging still works with portable PDBs. -->
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+</Project>
