@@ -1,6 +1,6 @@
 # Cartoon Terrain Studio
 
-![Cartoon Terrain Studio](docs/images/hero.jpg)
+![Painting a map by hand in Cartoon Terrain Studio: rock at three heights, pools, a waterfall into a canyon, a ravine](docs/images/paint.gif)
 
 Paint, generate and explore hand-inked 2.5D cartoon terrain — terraces, cliffs, rivers, waterfalls, chasms, bridges
 and forests — rendered live in a comic look (one light ramp, hatching, ink outlines, soft shadows).
@@ -17,8 +17,6 @@ and shaders; there are no hand-made textures, models or sprites.
    which takes about a minute. A welcome card then offers the three modes.
 
 ## What it does
-
-![Painting a map by hand: rock at three heights, pools, a waterfall into a canyon, a ravine](docs/images/paint.gif)
 
 The studio has three modes, switched at the top of the window:
 
